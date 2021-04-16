@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "GraphQL API for Minister",
+  "author": "Nelson Mbau",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin",
+    "dev": "webpack -w --mode development & nodemon ./bin",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "graphql-import": "^0.7.1",
+    "graphql-import-node": "^0.0.4",
+    "graphql-tools": "^4.0.6",
+    "nats": "^1.3.0",
+    "nats-hemera": "^7.0.1",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
