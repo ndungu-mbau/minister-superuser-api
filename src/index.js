@@ -2,6 +2,7 @@ require('babel-polyfill')
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
+import cors from "cors"
 import natsServer from 'nats'
 import Hemera from 'nats-hemera'
 
@@ -25,6 +26,7 @@ const hemera = new Hemera(nats, {
 const schema = makeExecutableSchema({ typeDefs, resolvers })
 
 hemera.ready(() => {
+  app.use(cors())
   app.use(bodyParser.urlencoded({ extended: true }))
   app.use(bodyParser.json('application/json'))
   app.use(cookieParser())

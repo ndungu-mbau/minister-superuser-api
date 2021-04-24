@@ -10,3 +10,8 @@ type Query{
 type Mutation{
   hello: String
 }
+
+type church{
+  id: String
+  name: String
+}
